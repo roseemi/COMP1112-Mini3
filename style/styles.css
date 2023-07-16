@@ -1,0 +1,122 @@
+/* General Reset */ 
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+/* Typography */ 
+
+/* body content */ 
+body {
+    font-family: 'Shantell Sans', cursive;
+    font-size: 1.125rem;
+    line-height: 1.6;   
+}
+
+/* headings */
+h1,
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-family: 'Rampart One', cursive;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p:has(> a) {
+    text-align: center; 
+}
+
+/* Layout & Appearance */
+
+/* Use flexbox to centre the text */
+header {
+    height: 15vw;
+    background-color:#FF8360; 
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-wrapper {
+    width: 80vw; 
+    margin: 0 auto;
+    border: 2px solid #999; 
+    padding: 1em;  
+}
+
+/* section */
+/* Use flexbox to align the elements in this section on the main axis */
+main > section:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;         /* Padding is only top/bottom so that the sides align with the rest of the page*/
+}
+
+/* Use flexbox to centre the text */
+main > section > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section > div + p {
+    background-color: #3CDBD3;
+    padding: 1em;
+}
+
+/* The stretch value elongates the element on the cross axis to fill the whitespace */
+main > section:nth-of-type(1) > p {
+    align-self: stretch;
+}
+
+/* Gap property separates the elements */
+main section:nth-of-type(2) {
+    display: flex;
+    padding: 1em 0;
+    gap: 1em;
+}
+
+main section:nth-of-type(2) p {
+    background-color: #E8E288;
+    padding: 1em;
+}
+
+/* footer */ 
+
+/* Flexbox aligns the elements in a row. Reverse the order so that "Meow!" is first */
+footer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+footer p,
+footer a {
+    background-color:#7DCE82; 
+    color: #fff;
+    padding: 2em;
+    border: 2px solid #fff;
+}
+
+/* Flex-grow makes the p elements expand to fill the extra whitespace on the main axis */
+footer p {
+    text-align:center;
+    flex-grow: 1;
+}
+
+footer a {
+    background-color:#FF8360;
+}
+
+footer a:hover {
+    background-color: #9C528B; 
+}
+
